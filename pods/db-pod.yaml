@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-es21
+  labels:
+    app: db-es21
+    type: database
+spec:
+      containers:
+      - name: mysql
+        image: mysql:5.7
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: Password@123
+        - name: MYSQL_DATABASE
+          value: dbes21kubernets
+        - name: MYSQL_USER
+          value: dbes21kubernets
+        ports:
+          - containerPort: 3306

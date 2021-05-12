@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-ngixes21
+  labels:
+    app: app-ngixes21
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:stable
+      ports:
+        - containerPort: 80
